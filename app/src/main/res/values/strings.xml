@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Taller1</string>
+    <string name="nombre">XYZ</string>
+    <string name="material">Seleccione un material...</string>
+    <string name="dije">Seleccione un dije...</string>
+    <string name="tipo">Seleccione un tipo...</string>
+    <string name="cuero">Cuero</string>
+    <string name="cuerda">Cuerda</string>
+    <string name="martillo">Martillo</string>
+    <string name="ancla">Ancla</string>
+    <string name="oro">Oro</string>
+    <string name="oro_rosado">Oro Rosado</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
+    <string name="cantidad">Ingrese Cantidad de Manillas</string>
+    <string-array name="op_material">
+        <item>@string/material</item>
+        <item>@string/cuero</item>
+        <item>@string/cuerda</item>
+    </string-array>
+    <string-array name="op_dije">
+        <item>@string/dije</item>
+        <item>@string/martillo</item>
+        <item>@string/ancla</item>
+    </string-array>
+    <string-array name="op_tipo">
+        <item>@string/tipo</item>
+        <item>@string/oro</item>
+        <item>@string/oro_rosado</item>
+        <item>@string/plata</item>
+        <item>@string/niquel</item>
+    </string-array>
+    <string name="moneda">Seleccione una moneda...</string>
+    <string name="dolar">Dolar(USD)</string>
+    <string name="peso">Peso(COP)</string>
+    <string name="cotizar">Cotizar</string>
+    <string-array name="op_moneda">
+        <item>@string/moneda</item>
+        <item>@string/dolar</item>
+        <item>@string/peso</item>
+    </string-array>
+</resources>
