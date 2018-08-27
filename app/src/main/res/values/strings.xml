@@ -31,9 +31,10 @@
         <item>@string/niquel</item>
     </string-array>
     <string name="moneda">Seleccione una moneda...</string>
-    <string name="dolar">Dolar(USD)</string>
+    <string name="dolar">Dólar(USD)</string>
     <string name="peso">Peso(COP)</string>
     <string name="cotizar">Cotizar</string>
+    <string name="resultado">Resultado</string>
     <string-array name="op_moneda">
         <item>@string/moneda</item>
         <item>@string/dolar</item>

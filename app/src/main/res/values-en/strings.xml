@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taller1</string>
+    <string name="nombre">XYZ</string>
+    <string name="material">Select a material...</string>
+    <string name="dije">Select a charm...</string>
+    <string name="tipo">Select a type...</string>
+    <string name="cuero">Leather</string>
+    <string name="cuerda">Rope</string>
+    <string name="martillo">Hammer</string>
+    <string name="ancla">Anchor</string>
+    <string name="oro">Gold</string>
+    <string name="oro_rosado">Pink Gold</string>
+    <string name="plata">Silver</string>
+    <string name="niquel">Nickel</string>
+    <string name="cantidad">Enter Quantity of Handles</string>
+    <string name="moneda">Select a currency...</string>
+    <string name="dolar">Dollar(USD)</string>
+    <string name="peso">Peso(COP)</string>
+    <string name="cotizar">Quote</string>
+    <string name="resultado">Result</string>
+</resources>
