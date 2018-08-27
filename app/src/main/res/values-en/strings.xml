@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Taller1</string>
-    <string name="nombre">XYZ</string>
+    <string name="app_name">XYZ</string>
+    <string name="nombre">Handle quoteer</string>
     <string name="material">Select a material...</string>
     <string name="dije">Select a charm...</string>
     <string name="tipo">Select a type...</string>
