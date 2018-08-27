@@ -13,6 +13,12 @@
     <string name="plata">Plata</string>
     <string name="niquel">Niquel</string>
     <string name="cantidad">Ingrese Cantidad de Manillas</string>
+    <string name="moneda">Seleccione una moneda...</string>
+    <string name="dolar">Dólar(USD)</string>
+    <string name="peso">Peso(COP)</string>
+    <string name="cotizar">Cotizar</string>
+    <string name="resultado">Resultado</string>
+
     <string-array name="op_material">
         <item>@string/material</item>
         <item>@string/cuero</item>
@@ -30,14 +36,14 @@
         <item>@string/plata</item>
         <item>@string/niquel</item>
     </string-array>
-    <string name="moneda">Seleccione una moneda...</string>
-    <string name="dolar">Dólar(USD)</string>
-    <string name="peso">Peso(COP)</string>
-    <string name="cotizar">Cotizar</string>
-    <string name="resultado">Resultado</string>
     <string-array name="op_moneda">
         <item>@string/moneda</item>
         <item>@string/dolar</item>
         <item>@string/peso</item>
     </string-array>
+    <string name="error_1">Escoge un material</string>
+    <string name="error_2">Escoge un dije</string>
+    <string name="error_3">Escoge un material</string>
+    <string name="error_4">Digita una cantidad valida</string>
+    <string name="error_5">Escoge una moneda</string>
 </resources>
