@@ -9,6 +9,7 @@ import android.widget.EdgeEffect;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Principal extends Activity {
     //Declaro las variables
@@ -57,56 +58,85 @@ public class Principal extends Activity {
         int cant = Integer.parseInt(cantidad.getText().toString());
         int op_mon=moneda.getSelectedItemPosition();
         int total = 0;
-        if (op_mat==1){
-            if (op_dij==1){
-                if (op_tip==1 || op_tip==2){
-                    total = Metodos.calcular(cant,100, op_mon);
+        if (validar()) {
+            if (op_mat == 1) {
+                if (op_dij == 1) {
+                    if (op_tip == 1 || op_tip == 2) {
+                        total = Metodos.calcular(cant, 100, op_mon);
+                    }
+                    if (op_tip == 3) {
+                        total = Metodos.calcular(cant, 80, op_mon);
+                    }
+                    if (op_tip == 4) {
+                        total = Metodos.calcular(cant, 70, op_mon);
+                    }
                 }
-                if (op_tip==3){
-                    total = Metodos.calcular(cant, 80, op_mon);
-                }
-                if (op_tip==4){
-                    total = Metodos.calcular(cant, 70, op_mon);
+                if (op_dij == 2) {
+                    if (op_tip == 1 || op_tip == 2) {
+                        total = Metodos.calcular(cant, 120, op_mon);
+                    }
+                    if (op_tip == 3) {
+                        total = Metodos.calcular(cant, 100, op_mon);
+                    }
+                    if (op_tip == 4) {
+                        total = Metodos.calcular(cant, 90, op_mon);
+                    }
                 }
             }
-            if (op_dij==2){
-                if (op_tip==1 || op_tip==2){
-                    total = Metodos.calcular(cant,120, op_mon);
+            if (op_mat == 2) {
+                if (op_dij == 1) {
+                    if (op_tip == 1 || op_tip == 2) {
+                        total = Metodos.calcular(cant, 90, op_mon);
+                    }
+                    if (op_tip == 3) {
+                        total = Metodos.calcular(cant, 70, op_mon);
+                    }
+                    if (op_tip == 4) {
+                        total = Metodos.calcular(cant, 50, op_mon);
+                    }
                 }
-                if (op_tip==3){
-                    total = Metodos.calcular(cant, 100, op_mon);
-                }
-                if (op_tip==4){
-                    total = Metodos.calcular(cant, 90, op_mon);
+                if (op_dij == 2) {
+                    if (op_tip == 1 || op_tip == 2) {
+                        total = Metodos.calcular(cant, 110, op_mon);
+                    }
+                    if (op_tip == 3) {
+                        total = Metodos.calcular(cant, 90, op_mon);
+                    }
+                    if (op_tip == 4) {
+                        total = Metodos.calcular(cant, 80, op_mon);
+                    }
                 }
             }
+            resp.setText("El valor total de su consulta es de: " + total + " " + moneda.getSelectedItem());
         }
-        if (op_mat==2){
-            if (op_dij==1){
-                if (op_tip==1 || op_tip==2){
-                    total = Metodos.calcular(cant,90, op_mon);
-                }
-                if (op_tip==3){
-                    total = Metodos.calcular(cant, 70, op_mon);
-                }
-                if (op_tip==4){
-                    total = Metodos.calcular(cant, 50, op_mon);
-                }
-            }
-            if (op_dij==2){
-                if (op_tip==1 || op_tip==2){
-                    total = Metodos.calcular(cant,110, op_mon);
-                }
-                if (op_tip==3){
-                    total = Metodos.calcular(cant, 90, op_mon);
-                }
-                if (op_tip==4){
-                    total = Metodos.calcular(cant, 80, op_mon);
-                }
-            }
-        }
-        resp.setText("El valor total de su consulta es de: " + total + moneda.getSelectedItem());
     }
 
-
+    public boolean validar(){
+        int op_mat=material.getSelectedItemPosition();
+        int op_dij=dije.getSelectedItemPosition();
+        int op_tip=tipo.getSelectedItemPosition();
+        int op_mon=moneda.getSelectedItemPosition();
+        if (op_mat==0){
+            Toast.makeText(this, recursos.getString(R.string.error_1),Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (op_dij==0){
+            Toast.makeText(this, recursos.getString(R.string.error_2),Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (op_tip==0){
+            Toast.makeText(this, recursos.getString(R.string.error_3),Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (cantidad.getText().toString().isEmpty()){
+            cantidad.setError(recursos.getString(R.string.error_4));
+            cantidad.requestFocus();
+            return false;
+        }
+        if (op_mon==0){
+            Toast.makeText(this, recursos.getString(R.string.error_5),Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 }

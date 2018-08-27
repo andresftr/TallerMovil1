@@ -19,4 +19,9 @@
     <string name="peso">Peso(COP)</string>
     <string name="cotizar">Quote</string>
     <string name="resultado">Result</string>
+    <string name="error_1">Choose a material</string>
+    <string name="error_2">Choose a charm</string>
+    <string name="error_3">Choose a type</string>
+    <string name="error_4">Enter a valid amount</string>
+    <string name="error_5">Choose a currency</string>
 </resources>
