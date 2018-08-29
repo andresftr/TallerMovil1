@@ -52,13 +52,14 @@ public class Principal extends Activity {
     }
 
     public void cotizar(View v){
-        int op_mat=material.getSelectedItemPosition();
-        int op_dij=dije.getSelectedItemPosition();
-        int op_tip=tipo.getSelectedItemPosition();
-        int cant = Integer.parseInt(cantidad.getText().toString());
-        int op_mon=moneda.getSelectedItemPosition();
-        int total = 0;
         if (validar()) {
+            int op_mat=material.getSelectedItemPosition();
+            int op_dij=dije.getSelectedItemPosition();
+            int op_tip=tipo.getSelectedItemPosition();
+            int cant = Integer.parseInt(cantidad.getText().toString());
+            int op_mon=moneda.getSelectedItemPosition();
+            int total = 0;
+
             if (op_mat == 1) {
                 if (op_dij == 1) {
                     if (op_tip == 1 || op_tip == 2) {
@@ -124,8 +125,8 @@ public class Principal extends Activity {
             Toast.makeText(this, recursos.getString(R.string.error_2),Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (op_tip==0){
-            Toast.makeText(this, recursos.getString(R.string.error_3),Toast.LENGTH_SHORT).show();
+        if (op_tip==0) {
+            Toast.makeText(this, recursos.getString(R.string.error_3), Toast.LENGTH_SHORT).show();
             return false;
         }
         if (cantidad.getText().toString().isEmpty()){
