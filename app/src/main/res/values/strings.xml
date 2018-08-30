@@ -43,6 +43,6 @@
     <string name="error_1">Escoge un material</string>
     <string name="error_2">Escoge un dije</string>
     <string name="error_3">Escoge un tipo</string>
-    <string name="error_4">Digite una cantidad valida</string>
+    <string name="error_4">Ingresa una cantidad válida</string>
     <string name="error_5">Escoge una moneda</string>
 </resources>

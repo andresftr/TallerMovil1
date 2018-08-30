@@ -60,54 +60,8 @@ public class Principal extends Activity {
             int op_mon=moneda.getSelectedItemPosition();
             int total = 0;
 
-            if (op_mat == 1) {
-                if (op_dij == 1) {
-                    if (op_tip == 1 || op_tip == 2) {
-                        total = Metodos.calcular(cant, 100, op_mon);
-                    }
-                    if (op_tip == 3) {
-                        total = Metodos.calcular(cant, 80, op_mon);
-                    }
-                    if (op_tip == 4) {
-                        total = Metodos.calcular(cant, 70, op_mon);
-                    }
-                }
-                if (op_dij == 2) {
-                    if (op_tip == 1 || op_tip == 2) {
-                        total = Metodos.calcular(cant, 120, op_mon);
-                    }
-                    if (op_tip == 3) {
-                        total = Metodos.calcular(cant, 100, op_mon);
-                    }
-                    if (op_tip == 4) {
-                        total = Metodos.calcular(cant, 90, op_mon);
-                    }
-                }
-            }
-            if (op_mat == 2) {
-                if (op_dij == 1) {
-                    if (op_tip == 1 || op_tip == 2) {
-                        total = Metodos.calcular(cant, 90, op_mon);
-                    }
-                    if (op_tip == 3) {
-                        total = Metodos.calcular(cant, 70, op_mon);
-                    }
-                    if (op_tip == 4) {
-                        total = Metodos.calcular(cant, 50, op_mon);
-                    }
-                }
-                if (op_dij == 2) {
-                    if (op_tip == 1 || op_tip == 2) {
-                        total = Metodos.calcular(cant, 110, op_mon);
-                    }
-                    if (op_tip == 3) {
-                        total = Metodos.calcular(cant, 90, op_mon);
-                    }
-                    if (op_tip == 4) {
-                        total = Metodos.calcular(cant, 80, op_mon);
-                    }
-                }
-            }
+            total = Metodos.resultado(op_mat,op_dij,op_tip,cant,op_mon);
+
             resp.setText("El valor total de su consulta es de: " + total + " " + moneda.getSelectedItem());
         }
     }
@@ -129,7 +83,8 @@ public class Principal extends Activity {
             Toast.makeText(this, recursos.getString(R.string.error_3), Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (cantidad.getText().toString().isEmpty()){
+        int cant = Integer.parseInt(cantidad.getText().toString());
+        if (cantidad.getText().toString().isEmpty()||cant<1||cant>10000){
             cantidad.setError(recursos.getString(R.string.error_4));
             cantidad.requestFocus();
             return false;
