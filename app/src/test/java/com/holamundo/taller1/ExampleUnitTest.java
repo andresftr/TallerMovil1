@@ -11,16 +11,9 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void calcularDolar(){
-        int cant=3, subtot=110, moneda=1, res;
-        res=330;
-        assertEquals(res, Metodos.calcular(cant,subtot,moneda),0);
-    }
-
-    @Test
-    public void calcularPeso(){
-        int cant=2, subtotal=90, moneda=2, res;
-        res=576000;
-        assertEquals(res, Metodos.calcular(cant,subtotal,moneda),0);
+    public void prueba1(){
+        int ma=1, d=1, t=1, c=1, mo=1, r;
+        r=100;
+        assertEquals(r, Metodos.resultado(ma,d,t,c,mo),0);
     }
 }

@@ -86,14 +86,14 @@ public class Principal extends Activity {
         if (cantidad.getText().toString().isEmpty()){
             cantidad.setError(recursos.getString(R.string.error_4));
             cantidad.requestFocus();
-            resp.setText("");
+            resp.setText(recursos.getString(R.string.resultado));
             return false;
         }
         int cant = Integer.parseInt(cantidad.getText().toString());
         if (cant<1){
             cantidad.setError(recursos.getString(R.string.error_4));
             cantidad.requestFocus();
-            resp.setText("");
+            resp.setText(recursos.getString(R.string.resultado));
             return false;
         }
         if (op_mon==0){
