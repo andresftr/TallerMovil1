@@ -83,10 +83,17 @@ public class Principal extends Activity {
             Toast.makeText(this, recursos.getString(R.string.error_3), Toast.LENGTH_SHORT).show();
             return false;
         }
-        int cant = Integer.parseInt(cantidad.getText().toString());
-        if (cantidad.getText().toString().isEmpty()||cant<1||cant>10000){
+        if (cantidad.getText().toString().isEmpty()){
             cantidad.setError(recursos.getString(R.string.error_4));
             cantidad.requestFocus();
+            resp.setText("");
+            return false;
+        }
+        int cant = Integer.parseInt(cantidad.getText().toString());
+        if (cant<1){
+            cantidad.setError(recursos.getString(R.string.error_4));
+            cantidad.requestFocus();
+            resp.setText("");
             return false;
         }
         if (op_mon==0){
